@@ -1,9 +1,11 @@
 import React, {Component} from 'react'
 import styled from '@emotion/styled'
 
-export const Link = styled.a`
+const Link = styled.a`
+,&:hover{
     text-decoration: none;
     color: #B7950B
+    }
 `
 
 class Footer extends Component {
@@ -33,7 +35,7 @@ class Footer extends Component {
                     <li style={{
                         listStyleType: 'none',
                         display: 'inline'
-                    }}><Link href={item.link}> {item.name} </Link>.</li>
+                    }}><Link href={item.link} target="_blank"> {item.name} </Link>.</li>
                 ))}
                 </ul>
             </footer>

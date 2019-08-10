@@ -1,0 +1,1 @@
+{"version":3,"sources":["style.css"],"names":[],"mappings":"AAAA,UACI,6BACJ,CAEA,QACI,YACJ","file":"main.6e18272e.chunk.css","sourcesContent":["body,html{\n    font-family: 'Nunito', sans-serif;\n}\n\n.hidden{\n    display: none;\n}\n\n"]}

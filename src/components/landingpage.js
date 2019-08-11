@@ -38,6 +38,7 @@ class LandingPage extends Component {
             document.getElementById('errorMessage').innerHTML="Username Not Found";
         }
         else{
+            document.getElementById('errorMessage').innerHTML="";
             document.getElementById('home').classList.add('hidden');
             document.getElementById('main').classList.remove('hidden');
             this.setState({
@@ -130,8 +131,7 @@ class LandingPage extends Component {
                             <input ref="username" type="text" name="username" id="username" style={InputStyle} ></input>  
                     </Form>
                     <span id="errorMessage" style={{
-                        color: 'red'
-                    }}></span>
+                        color: 'red'}}></span>
                     <Home />
                     <Main>
                         <Bio 

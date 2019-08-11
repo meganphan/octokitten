@@ -4,7 +4,7 @@ import Icon from './icon'
 const Home = () => {
     return(
         <div id="home" style={{
-            paddingTop: '30vh'
+            paddingTop: '25vh'
         }}>
             <Icon fill='#B7950B' />
             <h1 style={{

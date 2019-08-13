@@ -41,6 +41,7 @@ class LandingPage extends Component {
             document.getElementById('errorMessage').innerHTML="";
             document.getElementById('home').classList.add('hidden');
             document.getElementById('main').classList.remove('hidden');
+        
             this.setState({
                 username: user.login,
                 name: user.name,
@@ -49,6 +50,10 @@ class LandingPage extends Component {
                 bio: user.bio,
                 blog: user.blog,
                 repos: user.public_repos,
+                followers: user.followers,
+                following: user.following,
+                location: user.location,
+                joinDate: user.created_at
             })
         }
     }
@@ -134,12 +139,16 @@ class LandingPage extends Component {
                         color: 'red'}}></span>
                     <Home />
                     <Main>
-                        <Bio 
+                        <Bio
                             avatar={this.state.avatar}
                             name={this.state.name}
                             username={this.state.username}
                             bio={this.state.bio}
-                            url={this.state.url}/>
+                            url={this.state.url}
+                            followers={this.state.followers}
+                            following={this.state.following}
+                            location={this.state.location}
+                            joinDate={this.state.joinDate}/>
                             <Row className='mt-5'>
                                 <Col md={6}>
                                     <LangChart data={languages} />
@@ -148,7 +157,6 @@ class LandingPage extends Component {
                                     <ActivityChart data={activity} />
                                 </Col>
                             </Row>
-
                     </Main>
                 </div>
             </div>
